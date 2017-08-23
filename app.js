@@ -1,6 +1,6 @@
 // NOTE: Do not declare methods/statics using ES6 arrow functions (=>).
 // Arrow functions explicitly prevent binding this, so your method
-// will not have access to the document and the above examples will not work.
+// will not have access to the document and the schema examples will not work.
 
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
