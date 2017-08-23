@@ -19,6 +19,7 @@ console.log('kittySchema', kittySchema);
 // NOTE: methods must be added to the schema before compiling it with mongoose.model()
 kittySchema.methods.speak = function () {
   var greeting = this.name
+  // NOTE: [I forgot what ternary operators were](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
     ? "Meow name is " + this.name
     : "I don't have a name";
   console.log(greeting);
