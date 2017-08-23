@@ -1,3 +1,7 @@
+// NOTE: Do not declare methods/statics using ES6 arrow functions (=>).
+// Arrow functions explicitly prevent binding this, so your method
+// will not have access to the document and the above examples will not work.
+
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 // Replace "test" with your database name.
@@ -51,17 +55,17 @@ fluffy.save(function (err, fluffy) {
   fluffy.speak();
 });
 
-whiskers.save((err, whiskers) => {
+whiskers.save(function (err, whiskers) {
   if (err) return console.error(err);
   whiskers.speak();
 })
 
-mrKitters.save((err, mrKitters) => {
+mrKitters.save(function (err, mrKitters) {
   if (err) return console.error(err);
   mrKitters.speak();
 })
 
-garfield.save((err, garfield) => {
+garfield.save(function (err, garfield) {
   if (err) return console.error(err);
   garfield.speak();
 })
